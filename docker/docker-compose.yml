@@ -1,0 +1,12 @@
+version: '3.1'
+volumes:
+  m220_data:
+services:
+  mongodb:
+    container_name: mongodb-for-java-developers
+    image: mongo
+    volumes:
+      - m220_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: m220student
+      MONGO_INITDB_ROOT_PASSWORD: m220password
